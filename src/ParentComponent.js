@@ -10,18 +10,22 @@ export function ParentComponent(props) {
 
   const { counter, incCounter, incCounterWithMemo, items } = useCounter();
   return (
-    <div style={{ border: "1px solid #cacaca", backgroundColor: "#cacaca" }}>
-      <h1>ParentComponent</h1>
+    <div
+      style={{
+        border: "1px solid #cacaca",
+        backgroundColor: "#cacaca",
+        padding: "8px"
+      }}
+    >
+      <h1>Parent Component in grey</h1>
       <ChildRed
         counter={counter}
         incCounter={incCounter}
         incCounterWithMemo={incCounterWithMemo}
       />
       <ChildGreen counter={counter} />
-      <ChildBlue 
-              items={items}
-      />
-      <Yellow/>
+      <ChildBlue items={items} />
+      <Yellow />
     </div>
   );
 }
