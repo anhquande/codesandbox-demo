@@ -3,17 +3,11 @@ import React from "react";
 export function ChildBlue({ items }) {
   console.log("ChildBlue render");
   return (
-    <div
-      style={{
-        border: "1px dashed #0000cc",
-        backgroundColor: "#0000cc",
-        margin: "8px"
-      }}
-    >
-      <div>ChildBlue</div>
+    <div className="child blue">
+      <h2>ChildBlue</h2>
       {items &&
         items.map((item, index) => {
-          return <div key={index}>{item}</div>;
+          return <span key={index}>{item}</span>;
         })}
     </div>
   );

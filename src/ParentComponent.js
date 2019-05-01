@@ -4,6 +4,8 @@ import { ChildGreen } from "./ChildGreen";
 import { useCounter } from "./useCounter";
 import { ChildBlue } from "./ChildBlue";
 import { Yellow } from "./Yellow";
+import { Orange } from "./Orange";
+import { Cyan } from "./Cyan";
 
 export function ParentComponent(props) {
   console.log("ParentComponent render");
@@ -12,8 +14,8 @@ export function ParentComponent(props) {
   return (
     <div
       style={{
-        border: "1px solid #cacaca",
-        backgroundColor: "#cacaca",
+        border: "3px ridge rgba(204,204,204,0.2)",
+        backgroundColor: "rgba(204,204,204,0.6)",
         padding: "8px"
       }}
     >
@@ -26,6 +28,8 @@ export function ParentComponent(props) {
       <ChildGreen counter={counter} />
       <ChildBlue items={items} />
       <Yellow />
+      <Orange />
+      <Cyan incCounter={incCounterWithMemo} />
     </div>
   );
 }

@@ -3,8 +3,8 @@ import React from "react";
 export function ChildGreen({ counter }) {
   console.log("ChildGreen render");
   return (
-    <div style={{ border: "1px dashed #00cc00", margin: "8px" }}>
-      <div>ChildGreen</div>
+    <div className="child green">
+      <h2>Green: use the counter</h2>
       <div>Counter in Green : {counter}</div>
     </div>
   );
